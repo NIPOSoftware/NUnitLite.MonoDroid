@@ -94,6 +94,7 @@ namespace NUnitLite.MonoDroid
                     {
                         var assembly = testAssemblyEnumerator.Current;
                         testRunner.Run(assembly);
+                        RunOnUiThread(() => Toast.MakeText(this, "Test run finished", ToastLength.Short).Show());
                     }
                     catch (Exception ex)
                     {
